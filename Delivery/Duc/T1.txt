@@ -1,0 +1,9 @@
+yêu cầu: 
+Tìm hiểu quá trình integrate 
+
+kết quả mong muốn
+    - tìm được 1 thiết kế được hệ thống code để kết hợp giữa visualize và model
+    - biết được: 
+        + input, output có thể nhận được từ visualize
+        + input, output có thể nhận được từ model
+        + từ đó workflow chung là gì (task 4)
