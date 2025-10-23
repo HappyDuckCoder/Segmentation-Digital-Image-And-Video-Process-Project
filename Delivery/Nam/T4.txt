@@ -1,0 +1,6 @@
+yêu cầu: 
+Framework trong quá trình huấn luyện, tái huấn luyện SAM
+
+kết quả mong muốn:
+    - Tìm các tình huống có thể xảy ra ở SAM là gì? (ứng với tùy tình huống mà sử dụng một quy trình khác nhau)
+    - Đưa ra 1 hoặc 2 framework sử dụng SAM bằng dạng workflow (dùng mũi tên)

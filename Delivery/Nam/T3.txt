@@ -1,0 +1,14 @@
+yêu cầu
+Tìm 1-2 idea để làm project segmentation
+
+kết quả mong muốn
+- 1-2 ideas
+
+gợi ý: sử dụng chatgpt hỏi về quy trình lên một idea tốt
+
+kinh nghiệm của Đức, một idea cần: 
+    - Tên 
+    - đối tượng hướng đến là ai
+    - tại sao cần (giá trị thực tiễn và giá trị khoa học là gì)
+    - Có các chức năng core gì
+    - Có khả thi với nhóm không 

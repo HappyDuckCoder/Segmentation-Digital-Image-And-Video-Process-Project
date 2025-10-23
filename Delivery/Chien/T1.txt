@@ -1,0 +1,11 @@
+yêu cầu: 
+Tìm hiểu công cụ, thư viện visualize
+
+kết quả mong muốn: 
+- Các tool, thư viện, ngôn ngữ lập trình có thể xài cho project segmentation cho việc visualize là gì?
+    + tập trung vào các tool cài đặt cách nhận input, xuất output
+- Chọn ra một tool ưng ý, sau đó:
+    + có thể tham khảo code (lấy điểm sưu tầm code)
+    + code một đoạn demo visualize chúng 
+        i. tạo file demo
+        ii. code các hàm: loadInput, ExportOutput

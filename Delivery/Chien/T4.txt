@@ -1,0 +1,9 @@
+yêu cầu:
+    Hoàn thành phát biểu bài toán: Input, Ouput của hệ thống là gì.
+
+kết quả mong muốn: 
+    - trả lời được
+        + input là gì (có thể có nhiều input)
+        + output là gì (có thể có nhiều output)
+    - viết chi tiết để có thể để vào submission
+    

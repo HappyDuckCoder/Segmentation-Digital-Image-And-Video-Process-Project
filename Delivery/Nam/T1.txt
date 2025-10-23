@@ -1,0 +1,15 @@
+yêu cầu:
+Tìm hiểu SAM
+
+kết quả mong muốn:
+Trả lời được
+    - SAM là gì? Ai tạo ra SAM
+    - Tại sao người ta dùng SAM
+    - nếu không dùng SAM thì dùng gì, tìm các tool tượng tự SAM 
+    - Điểm yếu, điểm mạnh của SAM 
+    - demo sử dụng SAM 
+        + có thể tham khảo code (lấy điểm sưu tầm code)
+        + sử dụng pretrained, với mục đích để test thôi
+        + tạo demo theo các bước:
+            i) tạo file demo 
+            ii) demo 1 đoạn sử dụng SAM (input, output tùy ý, hoặc xin gợi ý từ Chiến)
