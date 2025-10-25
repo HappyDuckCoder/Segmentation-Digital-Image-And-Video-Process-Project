@@ -9,3 +9,64 @@ kết quả mong muốn:
     + code một đoạn demo visualize chúng 
         i. tạo file demo
         ii. code các hàm: loadInput, ExportOutput
+
+Công cụ visuallize
+1.Tổng quan
+-Việc visualize trong đồ án “Khảo sát phân đoạn ảnh dựa trên câu nhắc trực quan (SAM) là bước quan trọng để: 
+    oHiển thị kết quả mask hoặc vùng phân đoạn trên ảnh gốc.
+    oKiểm tra độ chính xác của mô hình.
+    oCho phép người dùng tương tác bằng visual promt (click chọn điểm, vẽ hộp hoặc mask thô).
+2.Chi tiết công cụ
+2.1OpenCV
+-Thư viện mã nguồn mã phổ biến trong xử lý ảnh và thị giác máy tính.
+-Tính năng: Đọc, ghi ảnh, hiển thị ảnh, vẽ mask overlay, nhận input từ chuột.
+-Ưu điểm:
+    oDễ kết hợp với SAM.
+    oNhận input visual promt trực tiếp.
+    oHiển thị nhanh, phù hợp demo.
+-Nhược điểm: Giao diện cơ bản, không web, ít tùy biến giao diện đẹp.
+2.2Matplotlib
+-Visualization trong notebook hoặc báo cáo.
+-Tính năng:
+    oOverlay mask và alpha blending.
+    oHỗ trợ color map, chú thích, title, legend.
+    oLưu ảnh đẹp ra PNG, PDF.
+-Ưu điểm:
+    oVisualization đẹp, dễ tùy chình màu và style.
+    oPhù hợp báo cáo.
+    oDễ overlay nhiều lớp, nhiều màu.
+-Nhược điểm:
+    oKhông nhận input trực tiếp từ người dùng (không click point)
+    oChậm khi xử lý nhiều ảnh.
+2.3Streamlit
+-Tạo web UI đơn giản cho mô hình.
+-Tính năng chính:
+    oUpload ảnh, hiển thị ảnh + mask overlay.
+    oSlider, button để điểu chỉnh alpha hoặc màu mask.
+-Ưu điểm:  
+    oGiao diện web đẹp, dễ triển khai demo.
+    oThích hợp chia sẻ trực tuyến.
+-Nhược điểm:
+    oKhông hỗ trợ vẽ trực tiếp trên ảnh (Không click point/draw box)
+    oChạy chậm hơn OpenCV nếu ảnh lớn.
+2.4Gradio
+-Demo AI tương tác.
+-Tính năng:
+    oUpload ảnh, click vùng (point/box), preview mask trực tiếp.
+    oTương tác trực tiếp với mô hình, hiển thị mask overlay.
+-Ưu điểm:
+    oTương tác trực tiếp, gần giống OpenCV nhưng web-based.
+    oDemo AI nhanh.
+-Nhược điểm:
+    oCần cài thêm, layout ít linh hoạt hơn Streamlit.
+3.Công cụ lựa chọn
+-Nếu không cần web UI, chỉ visualize mask, overlay và kiểm tra kết quả mô hình SAM, thì chọn OpenCV:
+    oDễ cài đặt.
+    oChạy trực tiếp trên desktop, không cần sever hay trình duyệt.
+    oHỗ trợ alpha blending, overlay, hiển thị nhanh kết quả.
+    oCó thể kết hợp với Matplotlib để có giao diện đẹp và tạo subplot giúp so sánh nhiều mask cùng lúc.
+Link code tham khảo: https://docs.opencv.org/4.x/db/d75/samples_2cpp_2create_mask_8cpp-example.html?utm_source=chatgpt.com
+
+
+
+
