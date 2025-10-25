@@ -106,11 +106,7 @@ Qt: xây dựng giao diện đồ họa desktop (GUI) hỗ trợ người dùng 
 6. Công cụ hỗ trợ
 
 Google Colab là một môi trường lập trình dựa trên web, cho phép viết và chạy code Python trực tiếp trên trình duyệt mà không cần cài đặt bất kỳ phần mềm nào trên máy tính. Đây là công cụ rất phù hợp cho các dự án xử lý ảnh và segmentation nhờ các đặc điểm sau:
-
 Chạy code Python miễn phí trên cloud: Colab cung cấp GPU/TPU miễn phí (hoặc nâng cấp trả phí để dùng GPU mạnh hơn), giúp việc huấn luyện mô hình segmentation hoặc xử lý ảnh lớn nhanh hơn so với máy cá nhân.
-
 Dễ dàng thử nghiệm và visualize: Colab hỗ trợ trực tiếp hiển thị hình ảnh, mask, overlay hoặc biểu đồ bằng các thư viện như matplotlib, OpenCV hay Plotly. Điều này rất tiện khi muốn quan sát kết quả phân đoạn trung gian mà không cần biên dịch hay cài đặt phức tạp.
-
 Tích hợp sẵn các thư viện phổ biến: Hầu hết các thư viện machine learning và computer vision như PyTorch, TensorFlow, OpenCV, segment-anything đều có thể cài đặt hoặc đã được tích hợp sẵn, giúp tiết kiệm thời gian thiết lập môi trường.
-
 Hỗ trợ chia sẻ và hợp tác: Colab lưu file dưới dạng Notebook, dễ dàng chia sẻ, cho phép nhiều người cùng chỉnh sửa và chạy thử nghiệm song song.
