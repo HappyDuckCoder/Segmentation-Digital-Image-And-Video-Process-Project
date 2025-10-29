@@ -7,3 +7,9 @@ kết quả mong muốn
         + input, output có thể nhận được từ visualize
         + input, output có thể nhận được từ model
         + từ đó workflow chung là gì (task 4)
+
+input của visualize: ảnh thực tế hoặc ảnh trả về từ model
+output của visualize: biến ảnh
+
+input của model: ảnh từ visualize
+output của model: ảnh đã phân đoạn hoặc thông tin được phân đoạn
