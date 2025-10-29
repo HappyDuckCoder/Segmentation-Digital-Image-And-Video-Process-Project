@@ -6,6 +6,18 @@ kết quả mong muốn
 
 gợi ý: sử dụng chatgpt hỏi về quy trình lên một idea tốt
 
+1. Tìm Vali - túi xách - đồ đạc bị quên ở sân bay
+Đầu vào: 1 ảnh/video “mẫu” (frame gần nhất bạn còn thấy món đồ) + tương tác chọn vùng (click, lasso, hoặc prompt “chiếc ví màu nâu”).
+Đầu ra: Danh sách thời điểm & vị trí món đồ xuất hiện (kèm confidence), heatmap/box/mask trên frame, đường thời gian “lần xuất hiện cuối”.
+Mục tiêu UX: “Cho biết chiếc ví nâu gần đây xuất hiện ở đâu, lúc mấy giờ, trong camera nào”.
+Quá trình xử lý: kết hợp retrieval + segmentation để truy xuất 
+2. Đánh giá phong cách thời trang của người dùng trong cửa hàng quần áo
+Đầu vào: Hình ảnh người dùng
+Xử lý: 
+- phân đoạn quần áo (quần, áo, váy, mũ, khẩu trang, ...) của người dùng và lưu lại
+Output: phân loại phong cách thời trang người dùng: thể thao, mát mẻ, lịch lãm,...
+---> thống kế để tăng giảm cửa hàng quần áo
+
 kinh nghiệm của Đức, một idea cần: 
     - Tên 
     - đối tượng hướng đến là ai
