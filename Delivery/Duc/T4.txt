@@ -4,3 +4,6 @@ Framework trong quá trình integrate
 kết quả mong muốn: 
 - 1 framework hệ thống lớn nhất xuyên suốt từ lúc bắt đầu nhận input đến output cuối cùng
 - vẽ được 1 workflow tương ứng
+
+https://github.com/facebookresearch/segment-anything
+
