@@ -12,3 +12,27 @@ kinh nghiệm của Đức, một idea cần:
     - tại sao cần (giá trị thực tiễn và giá trị khoa học là gì)
     - Có các chức năng core gì
     - Có khả thi với nhóm không 
+
+
+Idea: Phân đoạn món ăn trong ảnh để hỗ trợ nhận diện và ước lượng dinh dưỡng
+
+     Đối tượng hướng đến
+Người dùng phổ thông muốn theo dõi chế độ ăn
+Ứng dụng sức khỏe, thể hình, dinh dưỡng
+Học sinh, sinh viên quan tâm đến ăn uống lành mạnh
+
+     Tại sao cần?
+Giá trị thực tiễn: Giúp người dùng chụp ảnh món ăn và nhận diện từng phần (cơm, thịt, rau…) để ước lượng lượng calo, hỗ trợ kiểm soát chế độ ăn.
+Giá trị khoa học: Ứng dụng mô hình phân đoạn ảnh vào lĩnh vực dinh dưỡng, kết hợp AI với dữ liệu thực phẩm để tạo hệ thống hỗ trợ sức khỏe cá nhân.
+
+    Chức năng core
+Nhận ảnh món ăn từ điện thoại hoặc camera
+Cho phép người dùng click vào từng phần món ăn hoặc vẽ box
+Trả về mask phân đoạn từng thành phần món ăn
+Gợi ý tên món ăn và lượng calo ước tính (nếu có tích hợp dữ liệu)
+Hiển thị overlay ảnh + mask, cho phép lưu kết quả
+
+    Đánh giá khả thi
+Dữ liệu ảnh món ăn rất dễ thu thập (tự chụp hoặc từ nguồn mở)
+SAM có thể phân đoạn tốt với vật thể rõ ràng như món ăn
+Có thể demo trên ảnh chụp thực tế từ điện thoại
