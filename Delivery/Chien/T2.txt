@@ -1,5 +1,23 @@
-yêu cầu
-hoàn thành về ý nghĩa thực tiễn
+Ý nghĩa thực tiễn
+1. Tăng cường khả năng tương tác người – máy
+Phân đoạn ảnh dựa trên câu nhắc trực quan (như click điểm, vẽ hộp, nhập mô tả) giúp người dùng chỉ định vùng quan tâm một cách trực tiếp và dễ hiểu.
+Thay vì phải huấn luyện mô hình cho từng loại đối tượng, người dùng có thể hướng dẫn mô hình bằng hành động đơn giản, tiết kiệm thời gian và công sức.
 
-kết quả mong muốn: 
-- tìm hiểu và viết chi tiết để bỏ vào submission 
+2. Ứng dụng rộng rãi trong nhiều lĩnh vực
+Y tế: phân đoạn khối u, mô bệnh lý từ ảnh chụp CT/MRI bằng cách chỉ định vùng nghi ngờ.
+Nông nghiệp: xác định vùng cây trồng, sâu bệnh từ ảnh vệ tinh hoặc drone.
+An ninh – giám sát: phân tích chuyển động, nhận diện vật thể trong camera giám sát.
+Đồ họa – thiết kế: tách nền, chỉnh sửa ảnh theo vùng được chọn.
+Robot – tự động hóa: giúp robot nhận diện và thao tác chính xác với vật thể được chỉ định.
+
+3. Giảm chi phí và thời gian huấn luyện mô hình
+Mô hình như SAM (Segment Anything Model) có thể phân đoạn bất kỳ đối tượng nào mà không cần huấn luyện lại.
+Người dùng chỉ cần cung cấp câu nhắc trực quan, mô hình sẽ tự động phân đoạn chính xác → giảm phụ thuộc vào dữ liệu gán nhãn thủ công.
+
+4. Thúc đẩy nghiên cứu về AI hướng người dùng
+Đề tài góp phần phát triển các mô hình AI có khả năng hiểu ngữ cảnh và ý định của con người thông qua tương tác trực quan.
+Đây là bước tiến quan trọng trong việc xây dựng AI thân thiện, dễ sử dụng, phù hợp với người không chuyên.
+
+5. Tạo nền tảng cho các hệ thống AI linh hoạt
+Phân đoạn ảnh theo câu nhắc trực quan là tiền đề cho các hệ thống AI có thể tùy biến theo từng người dùng, từng tình huống cụ thể.
+Giúp AI không chỉ “nhìn thấy” mà còn “hiểu” điều người dùng muốn.
