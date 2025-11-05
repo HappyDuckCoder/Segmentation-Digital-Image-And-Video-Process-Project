@@ -15,7 +15,7 @@ Công cụ visuallize
 -Việc visualize trong đồ án “Khảo sát phân đoạn ảnh dựa trên câu nhắc trực quan (SAM) là bước quan trọng để: 
     o Hiển thị kết quả mask hoặc vùng phân đoạn trên ảnh gốc.
     o Kiểm tra độ chính xác của mô hình.
-    o Cho phép người dùng tương tác bằng visual promt (click chọn điểm, vẽ hộp hoặc mask thô).
+    o Cho phép người dùng tương tác bằng visual prompt (click chọn điểm, vẽ hộp hoặc mask thô).
 2.Chi tiết 
 2.1 OpenCV
 -Thư viện mã nguồn mã phổ biến trong xử lý ảnh và thị giác máy tính.

@@ -12,16 +12,25 @@ Xây dựng một hệ thống có khả năng thực hiện phân đoạn ảnh
 
 2. Input của hệ thống
 Hệ thống có thể nhận nhiều loại đầu vào như sau:
+
 Ảnh gốc: là ảnh đầu vào cần phân đoạn. Có thể là ảnh RGB, ảnh từ camera, hoặc ảnh được tải lên từ người dùng.
+
 Câu nhắc trực quan (visual prompt): là tín hiệu từ người dùng để chỉ định vùng cần phân đoạn. Bao gồm:
 - Điểm click (point prompt)
 - Hộp chọn (bounding box)
 - Mask thô (rough mask)
 - Văn bản mô tả (text prompt)
+
+Pre-processing Image
 Tham số tùy chỉnh (không bắt buộc): như độ mờ (alpha), màu mask, kích thước ảnh, chế độ hiển thị… dùng để điều chỉnh kết quả hiển thị.
+
 3. Output của hệ thống
 Hệ thống có thể trả về nhiều loại đầu ra như sau:
+
 Mask phân đoạn: là vùng ảnh được phân đoạn dưới dạng ảnh nhị phân hoặc ảnh màu, thể hiện đối tượng được chọn.
-Ảnh overlay: là ảnh gốc được phủ mask lên trên để hiển thị kết quả trực quan.
-Thông tin vùng phân đoạn: có thể bao gồm tọa độ vùng, diện tích, số điểm, hoặc định dạng JSON chứa thông tin mask.
+
+Ảnh overlay: là ảnh gốc được phủ mask lên trên để hiển thị kết quả trực quan. (ảnh được mask phân đoạn)
+
+Thông tin vùng phân đoạn: có thể bao gồm tọa độ vùng, diện tích, số điểm, hoặc định dạng JSON chứa thông tin mask. 
+
 Ảnh đầu ra: là ảnh kết quả được lưu dưới dạng PNG, JPG hoặc NumPy array để phục vụ lưu trữ hoặc xử lý tiếp theo.
