@@ -1,1 +1,0 @@
-print("button component loaded")
