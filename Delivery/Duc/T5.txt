@@ -1,26 +1,12 @@
-I. Nhóm tiêu chí kỹ thuật (Technical Performance)
-| **Tiêu chí**                                                | **Ý nghĩa / Cách đo lường**                                             | **Gợi ý công cụ đánh giá / chỉ số**                                         |
-| ----------------------------------------------------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| **1. Độ chính xác nhận diện (Accuracy / mIoU / F1)**        | Độ chính xác trong việc xác định vùng bệnh và phân loại đúng loại bệnh. | mIoU (Mean Intersection over Union), Precision, Recall, F1-score, Accuracy. |
-| **2. Khả năng phân đoạn chi tiết (Segmentation Quality)**   | Mức độ mô hình cắt chính xác vùng lá và vùng bệnh (biên rìa, vùng nhỏ). | Dice Coefficient, Boundary IoU, Pixel Accuracy.                             |
-| **3. Khả năng xử lý đa loại bệnh (Multi-class Robustness)** | Phân biệt tốt các loại bệnh khác nhau trên nhiều loại cây.              | Confusion Matrix, Macro F1.                                                 |
-| **4. Tốc độ xử lý (Inference Speed / FPS)**                 | Thời gian xử lý 1 ảnh hoặc 1 frame video.                               | FPS, Latency (ms/frame).                                                    |
-| **5. Độ ổn định trong điều kiện khác nhau (Robustness)**    | Giữ hiệu năng cao dù thay đổi ánh sáng, góc chụp, độ phân giải, nền.    | Kiểm thử với dataset đa điều kiện.                                          |
-
-II. Nhóm tiêu chí ứng dụng (Practical / Deployment Factors)
-| **Tiêu chí**                                                  | **Ý nghĩa / Tác động thực tế**                                      | **Cách đánh giá / minh chứng**                                                        |
-| ------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| **6. Khả năng triển khai trên thiết bị thực (Deployability)** | Mô hình có thể chạy trên thiết bị di động, drone, hoặc edge device. | Kích thước mô hình (MB), tốc độ trên CPU/GPU, hỗ trợ TensorFlow Lite / ONNX.          |
-| **7. Yêu cầu dữ liệu và huấn luyện (Data Efficiency)**        | Cần bao nhiêu dữ liệu và gán nhãn để đạt hiệu năng cao.             | Số lượng mẫu huấn luyện, thời gian train, khả năng tăng cường dữ liệu (augmentation). |
-| **8. Tính dễ sử dụng và giao diện (Usability)**               | Dễ tích hợp vào hệ thống giám sát, dashboard hoặc AR.               | Kiểm thử UX/UI, API hỗ trợ, visual output.                                            |
-| **9. Khả năng cập nhật / mở rộng (Scalability)**              | Có dễ thêm loại cây/bệnh mới không.                                 | Kiến trúc mô hình (modular), khả năng fine-tune nhanh.                                |
-| **10. Khả năng tự động hóa (Automation Level)**               | Hệ thống tự động phát hiện lá bệnh trong môi trường tự nhiên.       | Tỷ lệ phát hiện tự động đúng (%) mà không cần thao tác người dùng.                    |
-
-III. Nhóm tiêu chí tổng quát hóa & bền vững (Adaptability / Generalization)
-| **Tiêu chí**                                               | **Ý nghĩa / Tác động lâu dài**                                                     | **Ví dụ**                                                 |
-| ---------------------------------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| **11. Tính tổng quát (Generalization)**                    | Mô hình có nhận diện được bệnh mới hoặc cây khác với dữ liệu train.                | Test cross-dataset, transfer learning.                    |
-| **12. Độ tin cậy và khả năng giải thích (Explainability)** | Có thể giải thích được vùng bệnh, đặc trưng mô hình phát hiện.                     | Grad-CAM, Saliency Map, attention heatmap.                |
-| **13. Tiêu thụ tài nguyên (Energy Efficiency)**            | Mức độ tiêu thụ năng lượng khi triển khai (đặc biệt khi dùng drone/AR).            | Power consumption (W), runtime trên thiết bị.             |
-| **14. Tính bền vững (Sustainability / Maintainability)**   | Có hỗ trợ cập nhật dữ liệu nông nghiệp, biến đổi khí hậu.                          | Dataset mở, khả năng retrain định kỳ.                     |
-| **15. Tính phù hợp thực địa (Field Readiness)**            | Hiệu quả mô hình khi ứng dụng trong môi trường nông trại thực, không phải ảnh lab. | Đánh giá trên dữ liệu chụp thực địa (real-field dataset). |
+| **Criterion**                       | **Meaning / Purpose**                                                  | **Typical Metrics**        |
+| ----------------------------------- | ---------------------------------------------------------------------- | -------------------------- |
+| **1. Segmentation Accuracy**        | Đánh giá độ chính xác trong việc xác định vùng bệnh và biên đối tượng. | mIoU, Dice, F1-score       |
+| **2. Multi-class Capability**       | Khả năng phân biệt nhiều loại bệnh trên nhiều loại cây khác nhau.      | Confusion Matrix, Macro F1 |
+| **3. Processing Speed**             | Tốc độ xử lý ảnh hoặc video trong quá trình suy luận.                  | FPS, Latency (ms/frame)    |
+| **4. Robustness Across Conditions** | Giữ hiệu năng ổn định dưới thay đổi ánh sáng, nền, góc chụp.           | Cross-condition testing    |
+| **Criterion**                             | **Meaning / Purpose**                                                 | **Typical Metrics**                                    |
+| ----------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------ |
+| **5. Deployability**                      | Khả năng chạy trên thiết bị thực như mobile, drone, hoặc edge device. | Model size, CPU/GPU speed, TFLite/ONNX support         |
+| **6. Data Efficiency**                    | Mức độ phụ thuộc vào dữ liệu gán nhãn khi huấn luyện.                 | Number of required samples, augmentation effectiveness |
+| **7. Ease of Use**                        | Dễ tích hợp vào hệ thống giám sát hoặc ứng dụng thực tế.              | API support, UI/UX testing                             |
+| **8. Generalization & Field Performance** | Khả năng hoạt động tốt trên dữ liệu thực địa ngoài phòng lab.         | Cross-dataset test, real-field dataset evaluation      |
