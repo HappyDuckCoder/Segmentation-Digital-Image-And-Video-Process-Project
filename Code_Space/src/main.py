@@ -1,25 +1,110 @@
 import streamlit as st
 from PIL import Image
+import os
+from datetime import datetime
 import numpy as np
 
-def samProcess():
-    pass
+# --- Folder lưu ảnh ---
+output_folder = "assets"
+os.makedirs(output_folder, exist_ok=True)
 
-def main():
-    st.title("🔍 SAM Segmentation Demo (Streamlit)")
-    
-    uploaded_file = st.file_uploader("Upload an image", type=["jpg","png","jpeg"])
+# --- Page config ---
+st.set_page_config(
+    page_title="SAM Segmentation Demo",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# --- CSS nâng cao ---
+st.markdown("""
+<style>
+body {
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+}
+.stImage img {
+    border-radius: 12px;
+    box-shadow: 4px 4px 16px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+}
+.stImage img:hover {
+    transform: scale(1.05);
+}
+.stButton>button {
+    background-color: #4B0082;
+    color: white;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+.stButton>button:hover {
+    background-color: #6A0DAD;
+    color: white;
+}
+</style>
+""", unsafe_allow_html=True)
+
+# --- Sidebar controls ---
+st.sidebar.title("Controls")
+uploaded_file = st.sidebar.file_uploader("Upload Image", type=["jpg","png","jpeg"])
+run_btn = st.sidebar.button("Run Segmentation")
+
+# --- SAM Fake ---
+def samProcess(image):
+    print("hello world")  
+    mask = image  # dummy mask
+    score = 0.0
+    return mask, score
+
+# --- Tabs ---
+tab1, tab2 = st.tabs(["Upload & Segmentation", "Gallery"])
+
+# --- Tab 1: Upload & Segmentation ---
+with tab1:
+    st.header("📤 Upload Image")
     
     if uploaded_file:
-        image = np.array(Image.open(uploaded_file).convert("RGB"))
-        st.image(image, caption="Original Image", use_column_width=True)
+        image = Image.open(uploaded_file).convert("RGB")
+        st.subheader("Original Image")
+        st.image(image, use_container_width=True)
         
-        if st.button("Run SAM Segmentation"):
-            # Gọi model xử lý
-            mask, score = samProcess(image)
+        if run_btn:
+            # Gọi hàm SAM demo
+            mask, score = samProcess(np.array(image))
             
-            # Hiển thị kết quả
-            st.image(mask, caption=f"Segmentation (score={score:.2f})", use_column_width=True)
+            # Lưu ảnh với hậu tố "_SAM"
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            name_part = uploaded_file.name.rsplit(".", 1)[0]
+            ext = uploaded_file.name.rsplit(".", 1)[-1]
+            filename = f"{timestamp}_{name_part}_SAM.{ext}"
+            output_path = os.path.join(output_folder, filename)
+            Image.fromarray(mask).save(output_path)
+            
+            st.success(f"Segmentation done! Image saved as {filename}")
+            
+            # Hiển thị ảnh đã phân đoạn
+            st.subheader(f"Segmentation Result")
+            st.image(output_path, caption=f"Segmented by SAM (score={score:.2f})", use_container_width=True)
+            
+            # Metadata trong expander
+            with st.expander("Segmentation Details"):
+                st.write("Algorithm: SAM")
+                st.write(f"Score: {score:.2f}")
+                st.write(f"Filename: {filename}")
 
-if __name__ == "__main__":
-    main()
+# --- Tab 2: Gallery ---
+with tab2:
+    st.header("Gallery")
+    all_images = [f for f in os.listdir(output_folder) if f.lower().endswith((".png","jpg","jpeg"))]
+    
+    if all_images:
+        cols = st.columns(3)
+        for idx, img_name in enumerate(all_images):
+            img_path = os.path.join(output_folder, img_name)
+            with cols[idx % 3]:
+                st.image(img_path, caption=f"{img_name} - Segmented by SAM", use_container_width=True)
+                with st.expander("Details"):
+                    img = Image.open(img_path)
+                    st.write(f"Filename: {img_name}")
+                    st.write(f"Size: {img.size[0]} x {img.size[1]}")
+                    st.write(f"Mode: {img.mode}")
+    else:
+        st.info("No images in assets folder yet.")
