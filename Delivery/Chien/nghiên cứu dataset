@@ -1,0 +1,32 @@
+- Dataset hiện nay có rất nhiều, điển hình là PlantVillage
+- Có thể chia file như sau: 
+dataset/
+│
+├── segmentation/        # Phục vụ SAM
+│   ├── images/          # Ảnh lá cây gốc
+│   └── masks/           # SAM sẽ sinh ra mask
+│
+└── classification/      # Phân loại bệnh
+    ├── train/
+    │   ├── healthy/
+    │   ├── disease1/
+    │   ├── disease2/
+    │   └── disease3/
+    ├── val/
+    │   ├── healthy/
+    │   ├── disease1/
+    │   ├── disease2/
+    │   └── disease3/
+    └── test/
+        ├── healthy/
+        ├── disease1/
+        ├── disease2/
+        └── disease3/
+train: 70-80% dataset dùng để phân loại bệnh, xem nhiều lần để học.
+val: 10% dữ liệu để kiểm tra, đánh giá trong quá trình huấn luyện (nếu accuracy không tăng nữa -> ngừng train), mô hình không được xem.
+test: 10% dùng để đo độ chính xác thực sự sau quá trình huấn, mô hình chưa bao giờ thấy.
+trong mỗi phần chia thành các class, ví dụ:
+Healthy
+Rust
+Leaf Spot
+Blight
