@@ -26,7 +26,9 @@ train: 70-80% dataset dùng để phân loại bệnh, xem nhiều lần để h
 val: 10% dữ liệu để kiểm tra, đánh giá trong quá trình huấn luyện (nếu accuracy không tăng nữa -> ngừng train), mô hình không được xem.
 test: 10% dùng để đo độ chính xác thực sự sau quá trình huấn, mô hình chưa bao giờ thấy.
 trong mỗi phần chia thành các class, ví dụ:
-Healthy
-Rust
-Leaf Spot
-Blight
+
+Bệnh cháy lá 
+Bệnh đốm lá (Leaf Spot Disease) 
+Bệnh mốc sương (Downy Mildew)   
+Bệnh phấn trắng (Powdery Mildew)
+Bệnh thiếu Kali (Potassium Deficiency)
