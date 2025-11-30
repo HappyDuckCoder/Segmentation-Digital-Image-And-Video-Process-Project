@@ -1,2 +1,9 @@
-*/.gradio
+# Ignore all .gradio folders at any depth
+*/.gradio/
+
+# Ignore all .vscode folders
 .vscode/
+
+# Ignore Submission/Reference folders at any depth
+Submission/Reference/
+
