@@ -7,3 +7,6 @@
 # Ignore Submission/Reference folders at any depth
 Submission/Reference/
 
+*.pdf
+*.pth
+
